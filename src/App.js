@@ -9,6 +9,7 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.changeColor);
+    this.changeColor();
   }
 
   componentWillMount() {
@@ -47,14 +48,22 @@ class App extends React.Component {
     return (
       <div className="App">
         <body>
-          <div class="panel" data-color="white">
+          <header class="panel" data-color="black">
             <div>
               <h1>NimbleTwo</h1>
               <p>Digital product design</p>
               <p>UX Design</p>
               <p>Software Engineering</p>
             </div>
-          </div>
+          </header>
+          {/* <div class="panel" data-color="white">
+            <div>
+              <h1>NimbleTwo</h1>
+              <p>Digital product design</p>
+              <p>UX Design</p>
+              <p>Software Engineering</p>
+            </div>
+          </div> */}
           <div class="panel" data-color="violet">
             <h2>Violet</h2>
           </div>

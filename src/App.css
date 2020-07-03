@@ -26,9 +26,11 @@ body {
   transition: background-color 1s ease;
 }
 
+
 /* panel styles */
 .panel {
   /* min height incase content is higher than window height */
+  color: white;
   min-height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -39,6 +41,9 @@ body {
 }
 
 /* colours */
+.color-black {
+  background-color: #000;
+}
 .color-violet {
   background-color: #7A4EAB;
 }
