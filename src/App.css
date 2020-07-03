@@ -2,21 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+  color: black;
 }
 
 /* Setting fade transition and default settings */
@@ -24,6 +11,10 @@ body {
   color: #000;
   background-color: #f4f4f4;
   transition: background-color 1s ease;
+}
+
+.n2-align-left {
+  float: left;
 }
 
 
@@ -64,23 +55,4 @@ body {
 }
 .color-red {
   background-color: #F2293A;
-}
-
-/* styling for demo, can ignore */
-body {
-  text-align: center;
-  font-size: 120%;
-  line-height: 1.618;
-}
-h1, h2 {
-  font-size: 3em;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-}
-p {
-  max-width: 30em;
-  margin-bottom: 1.618em;
-}
-a {
-  color: #4332CF;
 }

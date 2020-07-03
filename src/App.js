@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import $ from "jquery";
+import "bootstrap/js/src/collapse.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
 
@@ -43,27 +45,46 @@ class App extends React.Component {
       }
     });    
   }
-  
+
   render() { 
     return (
       <div className="App">
         <body>
-          <header class="panel" data-color="black">
-            <div>
-              <h1>NimbleTwo</h1>
-              <p>Digital product design</p>
-              <p>UX Design</p>
-              <p>Software Engineering</p>
-            </div>
+          <header>
+            <nav className="main-navigation navbar navbar-expand-lg navbar-light bg-light justify-content-end">
+              <div className="n2-site-branding mr-auto">
+                <h1>NimbleTwo</h1>
+              </div>
+              <div className="menu-main-nav-container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarSupportedContent" className="collapse navbar-collapse">
+                  <ul className="navbar-nav n2-align-left">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
           </header>
-          {/* <div class="panel" data-color="white">
+          <div class="panel" data-color="black">
             <div>
-              <h1>NimbleTwo</h1>
               <p>Digital product design</p>
               <p>UX Design</p>
               <p>Software Engineering</p>
             </div>
-          </div> */}
+          </div>
           <div class="panel" data-color="violet">
             <h2>Violet</h2>
           </div>
