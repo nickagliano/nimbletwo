@@ -36,6 +36,10 @@ body {
 
 @media only screen and (max-width: 600px) {
 
+  #first-panel {
+    height: 80vh;
+  }
+
   #n2-tag-line {
     margin-top: 2rem;
   }
