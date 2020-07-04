@@ -40,6 +40,10 @@ body {
     margin-top: 2rem;
   }
 
+  #n2-intro-message {
+    text-align: center;
+  }
+
   #img-panel {
     display: none;
   }
