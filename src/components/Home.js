@@ -56,9 +56,7 @@ class Home extends React.Component {
             <div id="n2-intro-message" class="panel" data-color="black">
                 <h6 className="n2-services-banner">
                     <span className="not-last">Digital product design</span>
-                    {'\u00A0'}
                     <span className="not-last">UX design</span>
-                    {'\u00A0'}
                     <span>Software Engineering</span>
                 </h6>
                 <h1>Start with us</h1>

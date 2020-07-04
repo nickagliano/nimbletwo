@@ -22,6 +22,27 @@ body {
 
 .n2-services-banner {
   display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .n2-services-banner > span::after {
+    display: none;
+    position: relative;
+    left: .625rem;
+  }
+
+  .n2-services-banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .n2-services-banner > span {
+    padding-top: .33rem;
+    padding-bottom: .33rem;
+  }
 }
 
 .n2-services-banner > span {
@@ -29,7 +50,7 @@ body {
 }
 
 .n2-services-banner > span.not-last::after {
-    content: '\2022';
+    content: '| \00A0';
     position: relative;
     left: .625rem;
 }
