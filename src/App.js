@@ -1,5 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Home from './components/Home';
+import Story from './components/Story';
+import How from './components/How';
+import Contact from './components/Contact';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './App.css';
 import $ from "jquery";
 import "bootstrap/js/src/collapse.js";
@@ -49,64 +61,52 @@ class App extends React.Component {
   render() { 
     return (
       <div className="App">
-        <body>
-          <header>
-            <nav className="main-navigation navbar navbar-expand-lg navbar-light bg-light justify-content-end">
-              <div className="n2-site-branding mr-auto">
-                <h1>NimbleTwo</h1>
-              </div>
-              <div className="menu-main-nav-container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="navbarSupportedContent" className="collapse navbar-collapse">
-                  <ul className="navbar-nav n2-align-left">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
-                    </li>
-                  </ul>
+          <Router>
+            <header>
+              <nav className="main-navigation navbar navbar-expand-lg navbar-light bg-light justify-content-end">
+                <div className="n2-site-branding mr-auto">
+                  <h1>NimbleTwo</h1>
                 </div>
-              </div>
-            </nav>
-          </header>
-          <div class="panel" data-color="black">
-            <div>
-              <p>Digital product design</p>
-              <p>UX Design</p>
-              <p>Software Engineering</p>
-            </div>
-          </div>
-          <div class="panel" data-color="violet">
-            <h2>Violet</h2>
-          </div>
-          <div class="panel" data-color="indigo">
-            <h2>Indigo</h2>
-          </div>
-          <div class="panel" data-color="blue">
-            <h2>Blue</h2>
-          </div>
-          <div class="panel" data-color="green">
-            <h2>Green</h2>
-          </div>
-          <div class="panel" data-color="yellow">
-            <h2>Yellow</h2>
-          </div>
-          <div class="panel" data-color="orange">
-            <h2>Orange</h2>
-          </div>
-          <div class="panel" data-color="red">
-            <h2>Red</h2>
-          </div>
-        </body>
+                <div className="menu-main-nav-container">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div id="navbarSupportedContent" className="collapse navbar-collapse">
+                    <ul className="navbar-nav n2-align-left">
+                      <li id="home-nav" class="nav-item">
+                        <Link to="/" className="nav-link">Home</Link>
+                      </li>
+                      <li id="how-we-work-nav" class="nav-item">
+                        <Link to="/how-we-work" className="nav-link">How We Work</Link>
+                      </li>
+                      <li id="story-nav" class="nav-item">
+                        <Link to="/our-story" className="nav-link">Our Story</Link>
+                      </li>
+                      <li id="contact-nav" class="nav-item">
+                        <Link to="/contact" className="nav-link">Contact Us</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </header>
+            <body>
+              <Switch>
+                <Route path="/our-story">
+                  <Story />
+                </Route>
+                <Route path="/how-we-work">
+                  <How />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+                <Route path="/">
+                  <Home />
+                </Route>
+              </Switch>
+            </body>
+        </Router>
       </div>
     )
   };
