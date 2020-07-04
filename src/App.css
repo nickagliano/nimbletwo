@@ -20,12 +20,29 @@ body {
   float: left;
 }
 
+#n2-tag-line > span {
+  font-weight: bold;
+  color: hotpink
+}
+
+.n2-site-branding > h1 > span {
+  color: hotpink;
+}
+
 .n2-services-banner {
   display: flex;
   flex-direction: row;
 }
 
 @media only screen and (max-width: 600px) {
+
+  #n2-tag-line {
+    margin-top: 2rem;
+  }
+
+  #img-panel {
+    display: none;
+  }
 
   .n2-services-banner > span::after {
     display: none;

@@ -65,7 +65,7 @@ class App extends React.Component {
             <header>
               <nav className="main-navigation navbar navbar-expand-lg navbar-light bg-light justify-content-end">
                 <div className="n2-site-branding mr-auto">
-                  <h1>NimbleTwo</h1>
+                  <h1>Nimble<span>Two</span></h1>
                 </div>
                 <div className="menu-main-nav-container">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

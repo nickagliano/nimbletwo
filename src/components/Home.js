@@ -56,16 +56,18 @@ class Home extends React.Component {
             <div id="n2-intro-message" class="panel" data-color="black">
                 <h6 className="n2-services-banner">
                     <span className="not-last">Digital product design</span>
+                    {'\u00A0'}
                     <span className="not-last">UX design</span>
+                    {'\u00A0'}
                     <span>Software Engineering</span>
                 </h6>
-                <h1>Start with us</h1>
+                <h1 id="n2-tag-line">Build something <span>excellent</span></h1>
                 <FaAngleDoubleDown size={32}/>
             </div>
             <div class="panel" data-color="violet">
                 <h2>Violet</h2>
             </div>
-            <div class="panel" data-color="black">
+            <div id="img-panel" class="panel" data-color="black">
                 <img src={Kayaker} alt="A kayaker descends Hollywood rapids in Richmond, Virginia"></img>
             </div>
             <div class="panel" data-color="indigo">
