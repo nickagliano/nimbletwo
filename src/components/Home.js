@@ -3,19 +3,16 @@ import React from 'react';
 import $ from "jquery";
 import "bootstrap/js/src/collapse.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Kayaker from '../media/kayaker.jpg';
+import {FaAngleDoubleDown} from 'react-icons/fa';
 
 class Home extends React.Component {
 
   state = {};
 
   componentDidMount() {
-    window.addEventListener('scroll', this.changeColor);
     this.setActive()
     this.changeColor();
-  }
-
-  componentWillMount() {
-    window.removeEventListener('scroll', this.changeColor);
   }
 
   setActive() {
@@ -47,6 +44,8 @@ class Home extends React.Component {
         
         // Add class of currently active div
         $body.addClass('color-' + $(this).data('color'));
+
+
       }
     });    
   }
@@ -54,15 +53,22 @@ class Home extends React.Component {
   render() { 
     return (
         <>
-            <div class="panel" data-color="black">
-                <div>
-                <p>Digital product design</p>
-                <p>UX Design</p>
-                <p>Software Engineering</p>
-                </div>
+            <div id="n2-intro-message" class="panel" data-color="black">
+                <h6 className="n2-services-banner">
+                    <span className="not-last">Digital product design</span>
+                    {'\u00A0'}
+                    <span className="not-last">UX design</span>
+                    {'\u00A0'}
+                    <span>Software Engineering</span>
+                </h6>
+                <h1>Start with us</h1>
+                <FaAngleDoubleDown size={32}/>
             </div>
             <div class="panel" data-color="violet">
                 <h2>Violet</h2>
+            </div>
+            <div class="panel" data-color="black">
+                <img src={Kayaker} alt="A kayaker descends Hollywood rapids in Richmond, Virginia"></img>
             </div>
             <div class="panel" data-color="indigo">
                 <h2>Indigo</h2>

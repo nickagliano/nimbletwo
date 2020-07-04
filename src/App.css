@@ -6,15 +6,32 @@ header {
   color: black;
 }
 
+
 /* Setting fade transition and default settings */
 body {
   color: #000;
   background-color: #f4f4f4;
-  transition: background-color 1s ease;
+  transition-property: opacity, background-color; 
+  transition-duration: 1s; 
+  transition-timing-function: ease; 
 }
 
 .n2-align-left {
   float: left;
+}
+
+.n2-services-banner {
+  display: flex;
+}
+
+.n2-services-banner > span {
+  margin: 0 .5rem;
+}
+
+.n2-services-banner > span.not-last::after {
+    content: '\2022';
+    position: relative;
+    left: .625rem;
 }
 
 
@@ -24,11 +41,17 @@ body {
   color: white;
   min-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-family: sans-serif;
+  flex-direction: column;
   /* outline: 10px solid hotpink; */
   /* turn above on to see the edge of panels */
+}
+
+.panel > img {
+  width: 100vw;
+  height: auto;
 }
 
 /* colours */
@@ -55,4 +78,9 @@ body {
 }
 .color-red {
   background-color: #F2293A;
+}
+
+.opaque {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
