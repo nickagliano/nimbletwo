@@ -17,6 +17,9 @@ import $ from "jquery";
 import "bootstrap/js/src/collapse.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Deer from './media/deer.png';
+
+
 class App extends React.Component {
 
   state = {};
@@ -54,6 +57,18 @@ class App extends React.Component {
         
         // Add class of currently active div
         $body.addClass('color-' + $(this).data('color'));
+
+        if ($(this).data('color') === 'deer') {
+          $('#deer-panel').addClass('opaque');
+          $('#deer-panel').removeClass('transparent');
+
+        } else {
+          $('#deer-panel').removeClass('opaque');
+          $('#deer-panel').addClass('transparent');
+        }
+
+        console.log($(this).data('color'));
+
       }
     });    
   }
@@ -65,24 +80,25 @@ class App extends React.Component {
             <header>
               <nav className="main-navigation navbar navbar-expand-lg navbar-light bg-light justify-content-end">
                 <div className="n2-site-branding mr-auto">
+                  <img src={Deer} alt="logo, a deer looking into the distance"></img>
                   <h1>Nimble<span>Two</span></h1>
                 </div>
                 <div className="menu-main-nav-container">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                   </button>
                   <div id="navbarSupportedContent" className="collapse navbar-collapse">
                     <ul className="navbar-nav n2-align-left">
-                      <li id="home-nav" class="nav-item">
+                      <li id="home-nav" className="nav-item">
                         <Link to="/" className="nav-link">Home</Link>
                       </li>
-                      <li id="how-we-work-nav" class="nav-item">
+                      <li id="how-we-work-nav" className="nav-item">
                         <Link to="/how-we-work" className="nav-link">How We Work</Link>
                       </li>
-                      <li id="story-nav" class="nav-item">
+                      <li id="story-nav" className="nav-item">
                         <Link to="/our-story" className="nav-link">Our Story</Link>
                       </li>
-                      <li id="contact-nav" class="nav-item">
+                      <li id="contact-nav" className="nav-item">
                         <Link to="/contact" className="nav-link">Contact Us</Link>
                       </li>
                     </ul>

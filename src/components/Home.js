@@ -5,6 +5,7 @@ import "bootstrap/js/src/collapse.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Kayaker from '../media/kayaker.jpg';
 import {FaAngleDoubleDown} from 'react-icons/fa';
+// import TwoDeer from '../media/two-deer.jpg';
 
 class Home extends React.Component {
 
@@ -44,8 +45,14 @@ class Home extends React.Component {
         
         // Add class of currently active div
         $body.addClass('color-' + $(this).data('color'));
+        if ($(this).data('color') === 'deer') {
+          $('#deer-panel').addClass('opaque');
+          $('#deer-panel').removeClass('transparent');
 
-
+        } else {
+          $('#deer-panel').removeClass('opaque');
+          $('#deer-panel').addClass('transparent');
+        }
       }
     });    
   }
@@ -53,39 +60,43 @@ class Home extends React.Component {
   render() { 
     return (
         <>
-            <div id="n2-intro-message" class="panel" data-color="black">
-                <h6 className="n2-services-banner">
-                    <span className="not-last">Digital product design</span>
-                    {'\u00A0'}
-                    <span className="not-last">UX design</span>
-                    {'\u00A0'}
-                    <span>Software Engineering</span>
-                </h6>
-                <h1 id="n2-tag-line">Build something <span>excellent</span></h1>
-                <FaAngleDoubleDown size={32}/>
+            <div className="panel" data-color="black">
+              <div id="n2-intro-wrapper">
+                  <h6 className="n2-services-banner">
+                      <span className="not-last">Digital product design</span>
+                      {'\u00A0'}
+                      <span className="not-last">UX design</span>
+                      {'\u00A0'}
+                      <span>Software Engineering</span>
+                  </h6>
+                  <h1 id="n2-tag-line">Build something <span>excellent</span></h1>
+                  <FaAngleDoubleDown size={32} className="pulse"/>
+              </div>
             </div>
-            <div class="panel" data-color="violet">
-                <h2>Violet</h2>
+            <div id="deer-panel" className="panel" data-color="deer">
+              <div className="n2-home-quote">
+                <span>The world is full of meticulously built products that completely missed the mark. Products that aren't needed, products that aren’t delivering great experiences, and products that aren’t meeting the needs of their users.</span>
+              </div>
             </div>
-            <div id="img-panel" class="panel" data-color="black">
+            <div className="panel" data-color="black">
+                <h2>Black</h2>
+            </div>
+            <div id="img-panel">
                 <img src={Kayaker} alt="A kayaker descends Hollywood rapids in Richmond, Virginia"></img>
             </div>
-            <div class="panel" data-color="indigo">
-                <h2>Indigo</h2>
-            </div>
-            <div class="panel" data-color="blue">
+            <div className="panel" data-color="blue">
                 <h2>Blue</h2>
             </div>
-            <div class="panel" data-color="green">
+            <div className="panel" data-color="green">
                 <h2>Green</h2>
             </div>
-            <div class="panel" data-color="yellow">
+            <div className="panel" data-color="yellow">
                 <h2>Yellow</h2>
             </div>
-            <div class="panel" data-color="orange">
+            <div className="panel" data-color="orange">
                 <h2>Orange</h2>
             </div>
-            <div class="panel" data-color="red">
+            <div className="panel" data-color="red">
                 <h2>Red</h2>
             </div>
         </>
