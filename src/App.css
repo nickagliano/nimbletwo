@@ -22,11 +22,11 @@ body {
 
 #n2-tag-line > span {
   font-weight: bold;
-  color: hotpink
+  color: #FFDA1A;
 }
 
 .n2-site-branding > h1 > span {
-  color: hotpink;
+  color: #FFDA1A;
 }
 
 .n2-services-banner {
