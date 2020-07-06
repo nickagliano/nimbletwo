@@ -179,12 +179,13 @@ body {
 @media only screen and (max-width: 600px) {
 
   #deer-panel {
+    background-image: url('./media/two-deer.jpg');
     justify-content: flex-start;
     align-items: flex-start;
   }
 
   .n2-home-quote {
-    max-width: 50vw;
+    max-width: 60vw;
     text-align: left;
     font-size: 1.33em;
     margin-top: 4vh;
