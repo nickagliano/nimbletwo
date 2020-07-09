@@ -240,7 +240,7 @@ div.panel > h2 {
   }
 
   .n2-home-quote {
-    max-width: 60vw;
+    max-width: 80vw;
     text-align: center;
     font-size: 1.5em;
     margin-top: 4vh;
@@ -254,7 +254,9 @@ div.panel > h2 {
     align-content: center;
   }
 
-
+  .mobile-hide {
+    display: none;
+  }
 
   #n2-tag-line {
     margin-top: 2rem;

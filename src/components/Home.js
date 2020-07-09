@@ -81,9 +81,11 @@ class Home extends React.Component {
               <h2>How we work</h2>
               <div className="n2-home-quote">
                 <p>We're a small team of talented developers, artists, and designers.</p>
-                <hr style={{color: "white", width: "20vw", backgroundColor: "white", height: "1"}}></hr>
-                <p>Instead of cookie-cutter solutions, big design firms, and excessive outsourcing, we offer a refreshing approach to the development process.</p>
-                <p>We want to work closely with you—to understand your customers more deeply, design something better, and build a product that endures.</p>
+                <div className="mobile-hide">
+                  <hr style={{color: "white", width: "20vw", backgroundColor: "white", height: "1"}}></hr>
+                  <p>Instead of cookie-cutter solutions, big design firms, and excessive outsourcing, we offer a refreshing approach to the development process.</p>
+                  <p>We want to work closely with you—to understand your customers more deeply, design something better, and build a product that endures.</p>
+                </div>
               </div>
               <Link to="/how-we-work">
                 <Button className="btn p-3 text-uppercase pl-5 pr-5">Why work with us?</Button>
