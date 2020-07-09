@@ -1,11 +1,13 @@
 import React from 'react';
 import $ from "jquery";
+import {GrBlockQuote} from 'react-icons/gr';
 
 class Story extends React.Component {
 
   componentDidMount() {
     this.changeColor();
     this.setActive();
+    window.scrollTo(0, 0);
   }
 
   changeColor() {
@@ -43,11 +45,49 @@ class Story extends React.Component {
     $('#story-nav').addClass('active');
   }
 
+  coloredLine() {
+    return (
+    <hr
+        style={{
+            color: 'white',
+            backgroundColor: 'white',
+            height: 10,
+            width: '80vw'
+
+        }}
+    />)
+    }
+
+
   render() { 
     return (
-        <div className="panel" data-color="indigo">
-          <p>Story</p>
+      <>
+        <div className="panel" data-color="black">
+          <h2>Who are we?</h2>
         </div>
+        <div id="deer-panel" className="panel" data-color="deer">
+              <div className="deer-panel-wrapper">
+                <h2>NIMBLE</h2>
+                <p>We believe that small teams working under one roof can accomplish so much more.</p>
+              </div>
+            </div>
+        <div className="panel" data-color="black">
+          <h2>Loyal</h2>
+          <div className="n2-home-quote">
+             <p>We foster deep partnerships. We’re still working regularly with the vast majority of clients.</p>
+             {/* <p><GrBlockQuote/></p>
+             <p><span>"Quote."</span> - Human</p> */}
+           </div>
+        </div>
+        <div className="panel" data-color="blue">
+              <h2>Empathetic</h2>
+              <div className="n2-home-quote">
+                <p>People first, always. Every choice we make stems from that simple truth.</p>
+                <p><GrBlockQuote/></p>
+                <p><span>"Some people can read War and Peace and come away thinking it's a simple adventure story. Others can read the ingredients on a chewing gum wrapper and unlock the secrets of the universe."</span> - Lex Luther</p>
+              </div>
+        </div>
+      </>
     )
   };
 }

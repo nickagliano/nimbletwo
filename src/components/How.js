@@ -1,11 +1,14 @@
 import React from 'react';
 import $ from "jquery";
+import {FaHatWizard} from 'react-icons/fa';
+import {FaAngleDoubleDown} from 'react-icons/fa';
 
 class How extends React.Component {
 
   componentDidMount() {
     this.changeColor();
     this.setActive();
+    window.scrollTo(0, 0);
   }
 
   setActive() {
@@ -43,11 +46,53 @@ class How extends React.Component {
     });    
   }
 
+
+  coloredLine() {
+    return (
+    <hr
+        style={{
+            color: 'white',
+            backgroundColor: 'white',
+            height: 10,
+            width: '80vw'
+
+        }}
+    />)
+    }
+
   render() { 
     return (
+      <>
         <div className="panel" data-color="violet">
-          <p>How we work</p>
+          <h2>How we work</h2>
+            <div className="n2-how-we-work-intro">
+            {this.coloredLine()}
+              <ul className="n2-how-we-work-list">
+                <li>Research</li>
+                <li>Define</li>
+                <li>Prototype</li>
+                <li>Implement</li>
+                <li>Operate</li>
+              </ul>
+              <FaAngleDoubleDown size={32} className="pulse"/>
+          </div>
         </div>
+        <div className="panel" data-color="violet">
+          <h2>Research</h2>
+        </div>
+        <div className="panel" data-color="violet">
+          <h2>Define</h2>
+        </div>
+        <div className="panel" data-color="violet">
+          <h2>Prototype</h2>
+        </div>
+        <div className="panel" data-color="violet">
+          <h2>Implement</h2>
+        </div>
+        <div className="panel" data-color="violet">
+          <h2>Operate</h2>
+        </div>
+      </>
     )
   };
 }

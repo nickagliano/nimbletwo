@@ -26,12 +26,15 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.changeColor);
+    window.scrollTo(0, 0);
     this.changeColor();
   }
 
   componentWillMount() {
     window.removeEventListener('scroll', this.changeColor);
   }
+
+  
 
   changeColor() {
     // selectors

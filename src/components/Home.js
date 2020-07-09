@@ -3,9 +3,14 @@ import React from 'react';
 import $ from "jquery";
 import "bootstrap/js/src/collapse.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Kayaker from '../media/kayaker.jpg';
 import {FaAngleDoubleDown} from 'react-icons/fa';
-// import TwoDeer from '../media/two-deer.jpg';
+import {GrBlockQuote} from 'react-icons/gr';
+
+import Button from 'react-bootstrap/Button';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 class Home extends React.Component {
 
@@ -14,6 +19,7 @@ class Home extends React.Component {
   componentDidMount() {
     this.setActive()
     this.changeColor();
+    window.scrollTo(0, 0);
   }
 
   setActive() {
@@ -56,7 +62,7 @@ class Home extends React.Component {
       }
     });    
   }
-
+  
   render() { 
     return (
         <>
@@ -64,40 +70,42 @@ class Home extends React.Component {
               <div id="n2-intro-wrapper">
                   <h6 className="n2-services-banner">
                       <span className="not-last">Digital product design</span>
-                      {'\u00A0'}
                       <span className="not-last">UX design</span>
-                      {'\u00A0'}
                       <span>Software Engineering</span>
                   </h6>
                   <h1 id="n2-tag-line">Build something <span>excellent</span></h1>
-                  <FaAngleDoubleDown size={32} className="pulse"/>
+                  <FaAngleDoubleDown size={32} className="pulse" style={{"marginTop": "1em"}}/>
               </div>
             </div>
-            <div id="deer-panel" className="panel" data-color="deer">
+            <div className="panel" data-color="indigo">
+              <h2>How we work</h2>
               <div className="n2-home-quote">
-                <span>The world is full of meticulously built products that completely missed the mark. Products that aren't needed, products that aren’t delivering great experiences, and products that aren’t meeting the needs of their users.</span>
+                <p>We're a small team of talented developers, artists, and designers.</p>
+                <hr style={{color: "white", width: "20vw", backgroundColor: "white", height: "1"}}></hr>
+                <p>Instead of cookie-cutter solutions, big design firms, and excessive outsourcing, we offer a refreshing approach to the development process.</p>
+                <p>We want to work closely with you—to understand your customers more deeply, design something better, and build a product that endures.</p>
               </div>
-            </div>
-            <div className="panel" data-color="black">
-                <h2>Black</h2>
-            </div>
-            <div id="img-panel">
-                <img src={Kayaker} alt="A kayaker descends Hollywood rapids in Richmond, Virginia"></img>
+              <Link to="/how-we-work">
+                <Button className="btn p-3 text-uppercase pl-5 pr-5">Why work with us?</Button>
+              </Link>
             </div>
             <div className="panel" data-color="blue">
-                <h2>Blue</h2>
-            </div>
-            <div className="panel" data-color="green">
-                <h2>Green</h2>
-            </div>
-            <div className="panel" data-color="yellow">
-                <h2>Yellow</h2>
+              <h2>Values</h2>
+              <div className="n2-home-quote">
+                <p>We're a product of our values</p>
+              </div>
+              <Link to="/our-story">
+                <Button className="btn btn-light p-3 pl-5 pr-5 text-uppercase">See what we're all about</Button>
+              </Link>
             </div>
             <div className="panel" data-color="orange">
-                <h2>Orange</h2>
-            </div>
-            <div className="panel" data-color="red">
-                <h2>Red</h2>
+              <h2>case studies</h2>
+              <div className="n2-home-quote">
+                <p>Some of the things we've made.</p>
+              </div>
+              <Link to="/our-story">
+                <Button className="btn btn-light p-3 pl-5 pr-5 text-uppercase">Explore</Button>
+              </Link>
             </div>
         </>
     )

@@ -147,12 +147,49 @@ body {
 
 .n2-home-quote{
   display: flex;
-  flex-direction: row;
-  color: black;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: white;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 200;
   max-width: 60vw;
   margin: 2em;
+  text-align: center;
+}
+
+div.panel > h2 { 
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+.n2-home-quote > p > span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.deer-panel-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 60vw;
+  margin: 2em;
+  text-align: center;
+  color: black;
+}
+
+.deer-panel-wrapper > p {
+  padding: 1em;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+.deer-panel-wrapper > h2 {
+  font-weight: 100;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 #n2-intro-wrapper {
@@ -175,21 +212,49 @@ body {
   height: auto;
 }
 
+.n2-how-we-work-intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.n2-how-we-work-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.n2-how-we-work-list > li {
+  padding: .5em;
+}
+
 
 @media only screen and (max-width: 600px) {
 
   #deer-panel {
     background-image: url('./media/two-deer.jpg');
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .n2-home-quote {
     max-width: 60vw;
-    text-align: left;
-    font-size: 1em;
+    text-align: center;
+    font-size: 1.5em;
     margin-top: 4vh;
   }
+
+  .deer-panel-wrapper {
+    padding-top: 4em;
+    max-width: 80vw;
+    text-align: left;
+    text-align: center;
+    align-content: center;
+  }
+
+
 
   #n2-tag-line {
     margin-top: 2rem;

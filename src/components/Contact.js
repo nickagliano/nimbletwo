@@ -6,6 +6,7 @@ class Contact extends React.Component {
   componentDidMount() {
     this.changeColor();
     this.setActive();
+    window.scrollTo(0, 0);
   }
 
   setActive() {
