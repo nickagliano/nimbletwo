@@ -77,7 +77,7 @@ class Home extends React.Component {
                   <FaAngleDoubleDown size={32} className="pulse" style={{"marginTop": "1em"}}/>
               </div>
             </div>
-            <div className="panel" data-color="indigo">
+            <div className="panel" data-color="violet">
               <h2>How we work</h2>
               <div className="n2-home-quote">
                 <p>We're a small team of talented developers, artists, and designers.</p>
