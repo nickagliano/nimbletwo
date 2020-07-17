@@ -54,7 +54,9 @@ class CaseStudies extends React.Component {
           <FaAngleDoubleDown size={32} className="pulse" style={{"marginTop": "1em"}}/>
         </div>
           <div className="panel" data-color="black">
-          <h2>Riverside Outfitters</h2>
+            <div style={{textAlign: "center"}}>
+             <h2>Riverside Outfitters</h2>
+            </div>
           <div className="panelBody">
             <div className="panelHalf">
               <p><b>Background</b></p>

@@ -72,7 +72,7 @@ class How extends React.Component {
             <div className="n2-how-we-work-intro">
             {this.coloredLine()}
             <div className="n2-wrap-list">
-              <img src={Arrow} alt="An arrow facing downwards"></img>
+              <img className="mobile-hide" src={Arrow} alt="An arrow facing downwards"></img>
               <ul className="n2-how-we-work-list">
                 <li>Research</li>
                 <li>Prototype</li>
