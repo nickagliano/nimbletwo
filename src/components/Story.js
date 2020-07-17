@@ -68,7 +68,7 @@ class Story extends React.Component {
         <div id="deer-panel" className="panel" data-color="deer">
               <div className="deer-panel-wrapper">
                 <h2>NIMBLE</h2>
-                <p>We believe that small teams working under one roof can accomplish so much more.</p>
+                <p>We believe that small teams working under one roof can accomplish so much more than big design firms and corporations.</p>
               </div>
             </div>
         <div className="panel" data-color="black">

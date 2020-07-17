@@ -1,6 +1,8 @@
 import React from 'react';
 import $ from "jquery";
 
+import { AiOutlineGithub, AiFillLinkedin, AiOutlineInstagram } from 'react-icons/ai';
+
 class Contact extends React.Component {
 
   componentDidMount() {
@@ -48,7 +50,12 @@ class Contact extends React.Component {
   render() { 
     return (
       <div className="panel" data-color="black">
-        <p>Contact</p>
+        <h2>Contact</h2>
+        <div className="social-media-wrapper">
+          <AiOutlineGithub size={32} onClick={() => window.open("https://www.github.com/nickagliano", "_blank")}/>
+          <AiFillLinkedin style={{color: "white"}} size={32} onClick={() => window.open("https://www.linkedin.com/in/nickagliano/", "_blank")}/>
+          <AiOutlineInstagram style={{color: "white"}} size={32} onClick={() => window.open("https://www.instagram.com/nickagliano/", "_blank")}/>
+        </div>
       </div>
     )
   };

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Story from './components/Story';
 import How from './components/How';
 import Contact from './components/Contact';
+import CaseStudies from './components/CaseStudies';
 
 import {
   BrowserRouter as Router,
@@ -101,6 +102,9 @@ class App extends React.Component {
                       <li id="story-nav" className="nav-item">
                         <Link to="/our-story" className="nav-link">Our Story</Link>
                       </li>
+                      <li id="case-studies-nav" className="nav-item">
+                        <Link to="/case-studies" className="nav-link">Case Studies</Link>
+                      </li>
                       <li id="contact-nav" className="nav-item">
                         <Link to="/contact" className="nav-link">Contact Us</Link>
                       </li>
@@ -120,11 +124,17 @@ class App extends React.Component {
                 <Route path="/contact">
                   <Contact />
                 </Route>
+                <Route path="/case-studies">
+                  <CaseStudies />
+                </Route>
                 <Route path="/">
                   <Home />
                 </Route>
               </Switch>
             </body>
+            <footer className="footer">
+                <p>© 2020 NimbleTwo</p>
+            </footer>
         </Router>
       </div>
     )

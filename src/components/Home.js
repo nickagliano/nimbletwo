@@ -105,8 +105,8 @@ class Home extends React.Component {
               <div className="n2-home-quote">
                 <p>Some of the things we've made.</p>
               </div>
-              <Link to="/our-story">
-                <Button className="btn btn-light p-3 pl-5 pr-5 text-uppercase">Explore</Button>
+              <Link to="/case-studies">
+                <Button className="btn btn-light p-3 pl-5 pr-5 text-uppercase">Check us out</Button>
               </Link>
             </div>
         </>

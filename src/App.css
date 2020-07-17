@@ -221,13 +221,85 @@ div.panel > h2 {
   text-align: center;
 }
 
+.panelBody {
+  display: flex;
+  flex-direction: row;
+  max-width: 80vw;
+}
+
+.panelBodyVertical {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  text-align: center;
+}
+
+.stretchToFill {
+  flex: 1;
+}
+
+.social-media-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-width: 60vw;
+}
+
+.social-media-wrapper > *:hover {
+  cursor: pointer;
+}
+
+
+.panelHalf {
+  margin: 1em;
+  display: flex;
+  min-width: 40vw;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.servicesList {
+  text-align: left;
+}
+
+.servicesList > li {
+  padding: .5em;
+}
+
+
+.n2-wrap-list {
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+  margin-bottom: 2em;
+}
+
+
 .n2-how-we-work-list {
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .n2-how-we-work-list > li {
   padding: .5em;
+}
+
+.footer {
+  min-width: 100vw;
+  min-height: 6vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.footer > p {
+  padding: 1em;
+  margin: 0;
 }
 
 
