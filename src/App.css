@@ -249,6 +249,10 @@ div.panel > h2 {
   cursor: pointer;
 }
 
+.panelText {
+  max-width: 80vw;
+}
+
 
 .panelHalf {
   margin: 1em;
