@@ -71,8 +71,6 @@ class App extends React.Component {
           $('#deer-panel').addClass('transparent');
         }
 
-        console.log($(this).data('color'));
-
       }
     });    
   }

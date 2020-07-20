@@ -2,6 +2,8 @@ import React from 'react';
 import $ from "jquery";
 import {FaAngleDoubleDown} from 'react-icons/fa';
 
+import roWaiver from '../media/ro-waiver.png';
+
 class CaseStudies extends React.Component {
 
   componentDidMount() {
@@ -54,10 +56,9 @@ class CaseStudies extends React.Component {
           <FaAngleDoubleDown size={32} className="pulse" style={{"marginTop": "1em"}}/>
         </div>
           <div className="panel" data-color="black">
-            <div style={{textAlign: "center"}}>
-             <h2>Riverside Outfitters</h2>
-            </div>
-          <div className="panelBody">
+          <h2>Riverside Outfitters</h2>
+          <img className="demo" src={roWaiver} alt="Demo of Riverside Outfitters' waiver system" />
+          <div className="panelBodyMobileFlip">
             <div className="panelHalf">
               <p><b>Background</b></p>
               <p>Riverside Outfitters, located in Richmond, VA, provides outdoor adventures in and around the James River Park System. This includes whitewater rafting, kayaking, mountain biking, tree climbing, and summer camps.</p>

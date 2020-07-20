@@ -4,11 +4,9 @@ import $ from "jquery";
 import "bootstrap/js/src/collapse.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {FaAngleDoubleDown} from 'react-icons/fa';
-import {GrBlockQuote} from 'react-icons/gr';
 
 import Button from 'react-bootstrap/Button';
 import {
-  BrowserRouter as Router,
   Link
 } from "react-router-dom";
 
@@ -78,14 +76,15 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="panel" data-color="violet">
-              <h2>How we work</h2>
+              <h2>Our Approach</h2>
               <div className="n2-home-quote">
                 <p>We're a small team of talented developers, artists, and designers.</p>
-                <div className="mobile-hide">
+                {/* <div className="mobile-hide"> */}
                   <hr style={{color: "white", width: "20vw", backgroundColor: "white", height: "1"}}></hr>
-                  <p>Instead of cookie-cutter solutions, big design firms, and excessive outsourcing, we offer a refreshing approach to the development process.</p>
-                  <p>We want to work closely with you—to understand your customers more deeply, design something better, and build a product that endures.</p>
-                </div>
+                  <p>In the face of cookie-cutter solutions, big design firms, and excessive outsourcing, we offer a refreshing approach to the development process.</p>
+                  <p>We want to work closely with you, to truly listen to your design needs, and at the end of the day we want to <i><b>arrive at an excellent product that does what it's supposed to do</b></i>.</p>
+                  <p>It's as simple as that.</p>
+                {/* </div> */}
               </div>
               <Link to="/how-we-work">
                 <Button className="btn p-3 text-uppercase pl-5 pr-5">Why work with us?</Button>

@@ -67,25 +67,33 @@ class Story extends React.Component {
         </div>
         <div id="deer-panel" className="panel" data-color="deer">
               <div className="deer-panel-wrapper">
-                <h2>NIMBLE</h2>
-                <p>We believe that small teams working under one roof can accomplish so much more than big design firms and corporations.</p>
+                <h2>Nimble</h2>
+                <p>Small teams working under one roof can be more flexible, adapt to your needs, and accomplish more.</p>
               </div>
             </div>
         <div className="panel" data-color="black">
-          <h2>Loyal</h2>
+          <h2>Engaging</h2>
           <div className="n2-home-quote">
-             <p>We foster deep partnerships. We’re still working regularly with the vast majority of clients.</p>
-             {/* <p><GrBlockQuote/></p>
-             <p><span>"Quote."</span> - Human</p> */}
+             <p>We want to hear you, and we care about what you have to say. We form relationships with our clients through open communication, feedback, and mutual respect—and we're still working with the vast majority of them.</p>
+             <p><GrBlockQuote/></p>
+             <p><span>"Friends and good manners will carry you where money won't go."</span> - Margaret Walker</p>
            </div>
         </div>
         <div className="panel" data-color="blue">
               <h2>Empathetic</h2>
               <div className="n2-home-quote">
-                <p>People first, always. Every choice we make stems from that simple truth.</p>
+                <p>People first. Period. Every decision we make is derived from that rule.</p>
                 <p><GrBlockQuote/></p>
-                <p><span>"Some people can read War and Peace and come away thinking it's a simple adventure story. Others can read the ingredients on a chewing gum wrapper and unlock the secrets of the universe."</span> - Lex Luther</p>
+                <p><span>"When you throw dirt, you lose ground."</span> - Texan Proverb</p>
               </div>
+        </div>
+        <div className="panel" data-color="violet">
+          <h2>Authentic</h2>
+          <div className="n2-home-quote">
+             <p>We value authenticity and transparancy over egos and self-image. Working with us should feel like working with real human beings, not HR departments or white collar administration.</p>
+             <p><GrBlockQuote/></p>
+             <p><span>"People who enjoy meetings should not be in charge of anything."</span> - Thomas Sowell</p>
+           </div>
         </div>
       </>
     )

@@ -234,6 +234,12 @@ div.panel > h2 {
   text-align: center;
 }
 
+.panelBodyMobileFlip {
+  display: flex;
+  flex-direction: row;
+  max-width: 80vw;
+}
+
 .stretchToFill {
   flex: 1;
 }
@@ -253,6 +259,10 @@ div.panel > h2 {
   max-width: 80vw;
 }
 
+img.demo {
+  max-width: 75vw;
+  height: auto;
+}
 
 .panelHalf {
   margin: 1em;
@@ -298,7 +308,7 @@ div.panel > h2 {
   background-color: white;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .footer > p {
@@ -308,6 +318,18 @@ div.panel > h2 {
 
 
 @media only screen and (max-width: 600px) {
+
+  img.demo {
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .panelBodyMobileFlip {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    text-align: center;
+  }
 
   #deer-panel {
     background-image: url('./media/two-deer.jpg');
